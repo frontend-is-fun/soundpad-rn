@@ -7,11 +7,19 @@
  */
 
 import React from 'react';
-
+import {View} from 'react-native';
 import MainStack from './src/mainStack';
 
 const App = () => {
-  return <MainStack />;
+  return (
+    <View
+      style={{
+        backgroundColor: '#f8f5f1',
+        minHeight: '100%',
+      }}>
+      <MainStack />
+    </View>
+  );
 };
 
 export default App;

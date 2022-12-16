@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {TouchableOpacity, View, Text} from 'react-native';
-import Sound, {MAIN_BUNDLE} from 'react-native-sound';
+import Sound from 'react-native-sound';
 
 import styles from './index.module.scss';
 import {PadBlockProps} from '../../types';
@@ -18,7 +18,6 @@ export default function (props: PropsType) {
     // 如果是本地音乐第二个参数可能是
     // const sound = new Sound(info.sound, MAIN_BUNDLE, error => {
     // 具体的以后再测试
-    //
     const sound = new Sound(info.sound, '', error => {
       if (error) {
         console.log('failed to load the sound', error);

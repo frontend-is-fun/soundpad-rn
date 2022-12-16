@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {View, Text, Button} from 'react-native';
+import {View, Text, Button, ScrollView} from 'react-native';
 
 // sub components import
 import Category from './components/category';
@@ -19,19 +19,21 @@ export type CategoryType = {
 
 export default function HomeView(props: Props) {
   return (
-    <View style={styles.container}>
-      <Category />
-      <PadList />
-      <Button
-        title="Go to Test2"
-        onPress={() => {
-          console.log(1);
-          props.navigation.navigate('Profile');
-        }}
-      />
-      {/*test*/}
-      <Text>sss</Text>
-      <Text>sss</Text>
-    </View>
+    <ScrollView>
+      <View style={styles.container}>
+        <Category />
+        <PadList />
+        <Button
+          title="Go to Test2"
+          onPress={() => {
+            console.log(1);
+            props.navigation.navigate('Profile');
+          }}
+        />
+        {/*test*/}
+        <Text>sss</Text>
+        <Text>sss</Text>
+      </View>
+    </ScrollView>
   );
 }
