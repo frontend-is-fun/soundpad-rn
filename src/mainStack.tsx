@@ -16,7 +16,10 @@ const MainStack = () => {
         <Stack.Screen
           name="Home"
           component={HomeView}
-          options={{title: 'Welcome'}}
+          options={{
+            title: 'Welcome',
+            headerShown: false,
+          }}
         />
         <Stack.Screen name="Profile" component={Test2} />
       </Stack.Navigator>
