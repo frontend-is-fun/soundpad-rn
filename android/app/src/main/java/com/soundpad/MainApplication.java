@@ -1,3 +1,9 @@
+/*
+ * @Date: 2022-07-28 16:43:43
+ * @LastEditors: ibegyourpardon
+ * @LastEditTime: 2022-12-16 16:58:47
+ * @FilePath: /tts-vue/Users/feiandxs/workspace/SoundPad-RN/android/app/src/main/java/com/soundpad/MainApplication.java
+ */
 package com.soundpad;
 
 import android.app.Application;
@@ -12,6 +18,8 @@ import com.facebook.soloader.SoLoader;
 import com.soundpad.newarchitecture.MainApplicationReactNativeHost;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
+
+import com.zmxv.RNSound.RNSoundPackage;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -28,6 +36,7 @@ public class MainApplication extends Application implements ReactApplication {
           List<ReactPackage> packages = new PackageList(this).getPackages();
           // Packages that cannot be autolinked yet can be added manually here, for example:
           // packages.add(new MyReactNativePackage());
+          packages.add(new RNSoundPackage())
           return packages;
         }
 

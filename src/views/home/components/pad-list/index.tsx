@@ -19,7 +19,7 @@ export default function () {
   return (
     <View style={styles.container}>
       {currentCategoryData.map((item: PadBlockProps) => (
-        <SinglePad info={item} />
+        <SinglePad info={item} key={item.title.toString()} />
       ))}
     </View>
   );
