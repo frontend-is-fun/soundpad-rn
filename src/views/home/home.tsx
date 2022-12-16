@@ -4,6 +4,7 @@ import {View, Text, Button} from 'react-native';
 
 // sub components import
 import Category from './components/category';
+import PadList from './components/pad-list';
 import styles from './home.module.scss';
 
 type Props = {
@@ -11,7 +12,7 @@ type Props = {
 };
 
 // 使用 jotai 传递当前分类
-export type Category = {
+export type CategoryType = {
   id: number;
   title: string;
 };
@@ -20,6 +21,7 @@ export default function HomeView(props: Props) {
   return (
     <View style={styles.container}>
       <Category />
+      <PadList />
       <Button
         title="Go to Test2"
         onPress={() => {
