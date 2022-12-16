@@ -3,8 +3,10 @@ import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-import Test1 from './components/test1';
+// import Test1 from './components/test1';
 import Test2 from './components/test2';
+
+import HomeView from './views/home';
 
 const Stack = createNativeStackNavigator();
 const MainStack = () => {
@@ -13,7 +15,7 @@ const MainStack = () => {
       <Stack.Navigator>
         <Stack.Screen
           name="Home"
-          component={Test1}
+          component={HomeView}
           options={{title: 'Welcome'}}
         />
         <Stack.Screen name="Profile" component={Test2} />
