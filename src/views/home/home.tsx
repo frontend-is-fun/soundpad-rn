@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import {View, Text, Button} from 'react-native';
 
-import styles from './home.scss';
+import styles from './home.module.scss';
 
 type Props = {
   navigation: any;
