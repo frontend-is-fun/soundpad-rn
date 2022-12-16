@@ -1,11 +1,14 @@
 import * as React from 'react';
 
-import {TouchableOpacity, View, Text} from 'react-native';
+import {View} from 'react-native';
 import {useAtom} from 'jotai';
-import {categories, categoriesStore} from '../../../../data/store/category';
+import {categoriesStore} from '../../../../data/store/category';
 import soundEffectList from '../../../../data/index';
 
+import SinglePad from '../../../../components/single-pad';
+
 import styles from './index.module.scss';
+import {PadBlockProps} from '../../../../types';
 
 export default function () {
   const [currentCategory] = useAtom(categoriesStore);
@@ -15,8 +18,8 @@ export default function () {
 
   return (
     <View style={styles.container}>
-      {currentCategoryData.map((item: any) => (
-        <Text>{item.emoji}</Text>
+      {currentCategoryData.map((item: PadBlockProps) => (
+        <SinglePad info={item} />
       ))}
     </View>
   );

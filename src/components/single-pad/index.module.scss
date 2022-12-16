@@ -1,0 +1,23 @@
+.container {
+  width: 150px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #dddbd3;
+  border-radius: 60px;
+  text-decoration: none;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.textWrapper {
+  font-size: 144px;
+}
+
+/* 如果最后一行是3个元素 */
+.container:last-child:nth-child(2n - 1) {
+  margin-right: calc(50%);
+}
+
