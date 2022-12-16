@@ -1,0 +1,33 @@
+.container {
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.categoryBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #dddbd3;
+  border-radius: 120px;
+  padding: 9px 30px;
+  font-weight: 600;
+}
+
+.categoryBoxActive {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fd7522;
+  border: 1px solid #fd7522;
+  border-radius: 120px;
+  color: #fff;
+  padding: 9px 30px;
+  font-weight: 600;
+}
+
