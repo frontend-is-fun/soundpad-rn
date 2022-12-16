@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import {SafeAreaView, Text, Button} from 'react-native';
 
-export default function Test1({navigation}) {
+export default function Test1(props: any) {
   return (
     <SafeAreaView
       style={{
@@ -13,7 +13,7 @@ export default function Test1({navigation}) {
         title="Go to Test2"
         onPress={() => {
           console.log(1);
-          navigation.navigate('Profile');
+          props.navigation.navigate('Profile');
         }}
       />
       {/*test*/}
